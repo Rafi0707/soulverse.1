@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+  background: radial-gradient(circle at center, #0a0a1f 0%, #000005 100%);
+  color: #e0e0ff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.app-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.module-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* SoulCalc Styles */
+.soulcalc-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator-frame {
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+  background: rgba(10, 10, 25, 0.8);
+}
+
+.display {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.expression {
+  font-size: 1.2rem;
+  min-height: 1.5rem;
+  color: #a0a0ff;
+}
+
+.result {
+  font-size: 2rem;
+  min-height: 2.5rem;
+  color: #00d4ff;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.calc-button {
+  height: 60px;
+  border-radius: 15px;
+  border: 1px solid #00d4ff;
+  background: rgba(26, 26, 46, 0.8);
+  color: #e0e0ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-button:hover {
+  background: rgba(0, 212, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.easter-egg {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #00d4ff;
+}
+
+@media (max-width: 768px) {
+  .calculator-frame {
+    padding: 15px;
+  }
+  
+  .calc-button {
+    height: 50px;
+    font-size: 1rem;
+  }
+  
+  .button-grid {
+    gap: 8px;
+  }
+}
